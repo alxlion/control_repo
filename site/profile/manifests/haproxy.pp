@@ -5,8 +5,7 @@ class profile::haproxy {
     name => 'haproxy'
   }
   file { '/etc/haproxy/haproxy.cfg':
-    source: 'puppet:///files/haproxy.cfg'
-
+    source => 'puppet:///files/haproxy.cfg'
   }
   service { haproxy:
     ensure => running,
