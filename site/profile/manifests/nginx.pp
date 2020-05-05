@@ -26,7 +26,7 @@ class profile::nginx {
   file_line { 'Replace conf':
     path => '/etc/nginx/nginx.conf',
     replace => true,
-    line => '8080 default_server',
+    line => 'listen 8080 default_server;',
     match => '80 default_server',
     multiple => true
   }
